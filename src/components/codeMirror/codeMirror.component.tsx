@@ -6,7 +6,7 @@ interface CodeMirrorComponentProps extends ReactCodeMirrorProps { }
 const CodeMirrorComponent = (config: CodeMirrorComponentProps): JSX.Element => {
   return (
     <CodeMirror
-      height="50vh"
+      height="45vh"
       extensions={[python()]}
       {...config}
     />);

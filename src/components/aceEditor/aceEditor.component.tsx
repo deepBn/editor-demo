@@ -16,6 +16,8 @@ const AceEditorComponent = (props: IAceEditorProps): JSX.Element => {
       showPrintMargin={true}
       showGutter={true}
       highlightActiveLine={true}
+      width="100%"
+      height="45vh"
       setOptions={{
         enableBasicAutocompletion: true,
         enableLiveAutocompletion: true,

@@ -2,6 +2,7 @@ import Head from 'next/head'
 import classNames from '@/styles/index.module.css';
 import dynamic from 'next/dynamic';
 import CodeMirrorComponent from '@/components/codeMirror/codeMirror.component';
+import HeadingTextComponent from '@/components/headingText/headingText.component';
 
 const AceEditorComponent = dynamic(() => import('@/components/aceEditor/aceEditor.component'), {
   loading: () => <p>Loading...</p>,
@@ -20,9 +21,11 @@ export default function Home() {
       <main style={{ minHeight: '100vh' }}>
         <div style={{ display: 'flex' }}>
           <div className={classNames.editorContainer}>
+            <HeadingTextComponent title="CodeMirror" />
             <CodeMirrorComponent />
           </div>
           <div className={classNames.editorContainer}>
+            <HeadingTextComponent title="AceEditor" />
             <AceEditorComponent />
           </div>
         </div>
